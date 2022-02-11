@@ -204,7 +204,7 @@
 				- ex) DFD, DD, Mini-Spec., ERD, STD, 제어 명세서
 					- DFD (Data Flow Diagram, 자료 흐름도, 자료 흐름도, 버블 차트)
 						- 자료의 흐름 및 변환 과정, 기능을 도형 중심으로 기술하는 방법
-						- 기호
+						- 기호  
 							![image](https://user-images.githubusercontent.com/53277342/153383602-b6f1ca95-cfc9-4039-b530-648ef0f1d8e8.png)
 							- Process(프로세스): 자료 변환시키는 부분
 							- Data Flow(자료 흐름): 자료의 이동이나 연관관계
@@ -213,7 +213,7 @@
 					- DD (Data Dictionary, 자료 사전)
 						- DFD에 있는 자료 더 자세히 정의, 기록
 						- Meta Data: 데이터를 설명하는 데이터, 데이터의 데이터
-						- 기호
+						- 기호  
 							![image](https://user-images.githubusercontent.com/53277342/153393935-6edd7c8e-472e-4e69-bdbb-6c87b1989b87.png)		
 			- CASE
 				- 요구사항 자동 분석, 분석 명세서를 기술하도록 개발된 도구
@@ -452,6 +452,108 @@
 		3. 아키텍처 패턴 적용
 		4. 서브시스템 구체화
 		5. 검토
+
+2. 아키텍처 패턴
+	- 아키텍처를 설계할 떄 참조할 수 있는 전형적인 해결방식
+	- 개발시간 단축, 안정적 개발 가능
+	- 패턴
+		- Layers Pattern  
+			![image](https://user-images.githubusercontent.com/53277342/153587030-051e700f-5cf7-446d-9258-c8f276929226.png)
+			- 시스템을 계층화해 구성
+			- 상위 계층은 하위 계층에 대한 서비스 제공자, 하위 계층은 상위 계층에 대한 클라이언트
+			- 서로 마주보는 두 계층 사이에서만 상호작용 이뤄짐
+			- ex) OSI 7 Layer
+		- Client-Server Pattern  
+			![image](https://user-images.githubusercontent.com/53277342/153587059-b7f5f865-8573-4147-b4ac-f494a6df8d4c.png)
+			- 하나의 서버 컴포넌트와 다수의 클라이언트 컴포넌트로 구성
+			- 사용자는 클라이언트 통해 서버 요청, 클라이언트 응답 받아 사용자에게 제공
+		- Pype-Filter Pattern  
+			![image](https://user-images.githubusercontent.com/53277342/153587129-17031df9-d1c6-4e80-9d9c-b191ffa77450.png)
+			- 데이터 스트림(송수신 흐름) 절차의 각 단계를 필터 컴포넌트로 캡슐화, 파이프 통해 데이터 전송
+			- 재사용성 좋고 확장 용이
+			- 필터간 데이터 이동 시 데이터 변환으로 인한 오버헤드 발생
+			- ex) UNIX의 Shell
+		- MVC Pattern (Model-View-Controller)  
+			![image](https://user-images.githubusercontent.com/53277342/153587777-77fee720-882a-42da-905d-84f09da062a3.png)
+			- 서브시스템을 3개의 부분으로 구조화
+			- 부분
+				- Model: 서브시스템의 핵심 기능, 데이터 보관
+				- View: 사용자에게 정보 표시
+				- Controller: 사용자로부터 받은 입력 처리
+			- 대화형 어플리케이션에 적합
+		- Master-Slave Pattern  
+			![image](https://user-images.githubusercontent.com/53277342/153587887-d0592666-ceb4-4f87-864e-3d8e16acfaf1.png)
+			- 마스터 컴포넌트는 슬레이브 컴포넌트로 작업 분할, 슬레이브 컴포넌트에서 처리된 결과물 받음
+			- 장애 허용 시스템, 병렬 컴퓨팅 시스템에서 주로 활용
+		- Broker Pattern  
+			![image](https://user-images.githubusercontent.com/53277342/153588082-fade5427-9599-4845-b2cc-4872cbc7007f.png)
+			- 사용자가 원하는 서비스 브로커 컴포넌트에 요청, 브로커 컴포넌트가 요청에 맞는 컴포넌트와 사용자 연결
+			- 원격 호출에 응답하는 컴포넌트들이 여러 개 있을 때 적합
+			- 분산 환경 시스템에서 주로 활용
+		- Peer-To-Peer Pattern
+			![image](https://user-images.githubusercontent.com/53277342/153588440-2e261173-6517-4a85-9220-b56e40a0e569.png)
+			- 피어를 하나의 컴포넌트로 간주, 상황에 따라 서버, 클라이언트가 될 수 있음
+			- 멀티스레딩 방식 사용
+		- Event-Bus Pattern  
+			![image](https://user-images.githubusercontent.com/53277342/153588619-deeb9f3c-2b61-4313-972e-ef7755fa29ad.png)
+			- 소스가 특정 채널에 이벤트 메시지 발행, 해당 채널 구독한 리스너들이 메시지 받아 이벤트 처리
+			- 주요 컴포넌트
+				- Source: 이벤트 생성
+				- Listener: 이벤트 수행
+				- Channel: 이벤트 통로
+				- Bus: 채널들 관리
+		- Blackboard Pattern
+			![image](https://user-images.githubusercontent.com/53277342/153588826-96a97df0-582a-4468-8ff1-d9866ae5d43e.png)
+			- 컴포넌트들은 검색 통해 블랙보드에서 원하는 데이터 찾음
+			- 해결책이 명확하지 않은 문제 처리할 때 유용
+			- ex) 음성 인식, 차량 식별, 신호 해석
+		- Interpreter Pattern
+			![image](https://user-images.githubusercontent.com/53277342/153589303-bc215e87-453a-4985-827f-6cd1c945217a.png)
+			- 특정 언어로 작성된 프로그램 코드 해석하는 컴포넌트 설계할 때 사용됨
+
+3. Object-Oriented (객체지향)
+	- 소프트웨어를 개발할 때 객체들을 조립해서 작성하는 기법
+	- 재사용 및 확장 용이, 복잡한 구조를 단계적 계층적으로 표현
+	- 객체 (Object)
+		- 데이터(Attribute)와 함수(Operation)를 묶어놓은 하나의 소프트웨어 모듈
+		- 시간에 따라 상태 변화
+	- 클래스 (Class)
+		- 공통된 속성과 행위를 갖는 객체의 집합
+		- Instance: 클래스에 속한 각각의 객체
+		- Instantiation(인스턴스화): 클래스로부터 객체 생성하는 것
+		- 최상위 클래스: 상위 클래스를 갖지 않는 클래스
+		- Super Class: 상위(부모) 클래스, Sub Class: 하위(자식) 클래스
+	- 상속 (Inheritance)
+		- 기존 정의된 상위 클래스의 모든 속성과 연산을 하위 클래스가 물려받는 것
+		- 재정의할 필요 없으며 새로운 속성과 연산 첨가 가능
+		- 소프트웨어의 재사용성 향상
+		- 다중 상속 (Multiple Inheritance): 한 개의 하위 클래스가 두 개 이상의 상위 클래스로부터 상속받는 것
+	- 다형성 (Polymorphism)
+		- 하위 객체들이 서로 다른 형태의 특성을 갖는 객체로 이용될 수 있는 성질
+	- 연관성 (Relationship)
+		- 상호 참조하는 관계
+
+4. OOA (Object Oriented Analysis, 객체지향 분석)
+	- 사용자의 요구사항 분석해 모든 클래스에 대한 속성 관계 정의해 모델링하는 작업
+	- 방법론
+		- Rumbaugh(럼바우) 방법
+			- 모든 소프트웨어 구성 요소를 그래픽 표기법을 이용해 모델링
+			1. 객체 모델링
+				- 객체들 간 관계 규정해 객체 다이어그램으로 표시
+			2. 동적 모델링
+				- 시간의 흐름에 따른 동적인 행위 표현하는 모델링
+			3. 기능 모델링
+				- DFD 이용해 자료 흐름 중심으로 처리 과정 표현한 모델링
+		- Booch(부치) 방법: 미시적 개발, 거시적 개발
+		- Jacobson 방법: Use Case 강조해 사용하는 분석 방법
+		- Coad와 Yourdan 방법: E-R Diagram 사용해 객체 행위 모델링
+	- 객체지향 설계원칙 
+
+
+
+
+
+
 
 
 
