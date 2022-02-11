@@ -318,14 +318,39 @@
 			- Structural Diagram
 				- 주로 정적 모델링에서 사용
 				- Class Diagram: 클래스 사이의 관계 표현
+					- 클래스: 이름, 속성, 오퍼레이션으로 표기
+					- 제약조건: 입력될 값, 오퍼레이션 수행 전후에 지정할 조건 표기
+					- 관계: 클래스간 연관성 표현
+						- 연관, 집합, 포함, 일반화, 의존 관계
+					- 접근 제어자
+						- public(+): 어떤 클래스든 접근 가능
+						- private(-): 해당 클래스 내부에서만 접근 가능
+						- protected(#): 동일 패키지 내 클래스, 상속받은 외부 패키지 클래스에서 접근 가능
+						- package(~): 동일 패키지 내 클래스만 접근 가능
 				- Object Diagram: 특정 시점의 객체간 관계 표현
 				- Component Diagram: 컴포넌트간 관계 표현
 				- Deployment Diagram: 물리적 요소들의 위치 표현
 				- Composite Structure Diagram: 복합 구조 갖는 경우 내부 구조 표현
 				- Package Diagram: 패키지들의 관계 표현
+				
 			- Behavioral Diagram
-				- Use Case Diagram: 사용자의 요구 분석 위해 사용자와 사용사례로 구성
+				- Use Case Diagram: 사용자의 요구 분석 위해 수행할 수 있는 기능을 사용자의 관점에서 표현  
+					![image](https://user-images.githubusercontent.com/53277342/153552631-cdc4e1a1-fc91-4cd3-8ebb-a90ab7ac2947.png)
+					- System: 시스템 내부와 외부 구분 위해 시스템 내부를 사각형으로 묶어 범위 표현
+					- Actor: 시스템과 상호작용하는 모든 외부 요소
+						- 주액터(사용자 액터): 시스템을 사용해 이득을 얻는 대상, 주로 사람
+						- 부액터(시스템 액터): 시스템에 서비스를 제공하는 외부 시스템, 조직이나 기관
+					- Use Case: 시스템이 액터에게 제공하는 서비스 또는 기능
+					- Relationship: Actor - Use Case, Use Case - Use Case 간 관계
+						- Include: Use Case간 공통적으로 적용되는 기능을 별도로 분리해 새로운 Use Case 만든 경우
+						- Extend: Use Case가 특정 조건에 부합돼 기능이 확장되는 관계
+						- 연관관계
 				- Sequence Diagram: 객체들이 주고받는 메시지 표현
+					- Actor: 시스템으로부터 서비스 요청하는 외부 요소
+					- Object(객체): 메시지 주고받는 주체
+					- Lifeline(생명선): 객체가 메모리에 존재하는 기간
+					- Active Box(실행 상자): 객체가 메시지 주고받으며 구동되고 있음 표현
+					- Message: 객체가 상호작용을 위해 주고받는 메시지
 				- Communication Diagram: 객체간 메시지 + 연관관계 표현
 				- State Diagram: 속한 클래스의 상태 변화, 객체간 상호작용에 따른 변화 표현
 				- Activity Diagram: 시스템의 처리 흐름을 순서에 따라 표현
