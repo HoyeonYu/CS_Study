@@ -492,7 +492,7 @@
 			- 사용자가 원하는 서비스 브로커 컴포넌트에 요청, 브로커 컴포넌트가 요청에 맞는 컴포넌트와 사용자 연결
 			- 원격 호출에 응답하는 컴포넌트들이 여러 개 있을 때 적합
 			- 분산 환경 시스템에서 주로 활용
-		- Peer-To-Peer Pattern
+		- Peer-To-Peer Pattern  
 			![image](https://user-images.githubusercontent.com/53277342/153588440-2e261173-6517-4a85-9220-b56e40a0e569.png)
 			- 피어를 하나의 컴포넌트로 간주, 상황에 따라 서버, 클라이언트가 될 수 있음
 			- 멀티스레딩 방식 사용
@@ -504,12 +504,12 @@
 				- Listener: 이벤트 수행
 				- Channel: 이벤트 통로
 				- Bus: 채널들 관리
-		- Blackboard Pattern
+		- Blackboard Pattern  
 			![image](https://user-images.githubusercontent.com/53277342/153588826-96a97df0-582a-4468-8ff1-d9866ae5d43e.png)
 			- 컴포넌트들은 검색 통해 블랙보드에서 원하는 데이터 찾음
 			- 해결책이 명확하지 않은 문제 처리할 때 유용
 			- ex) 음성 인식, 차량 식별, 신호 해석
-		- Interpreter Pattern
+		- Interpreter Pattern  
 			![image](https://user-images.githubusercontent.com/53277342/153589303-bc215e87-453a-4985-827f-6cd1c945217a.png)
 			- 특정 언어로 작성된 프로그램 코드 해석하는 컴포넌트 설계할 때 사용됨
 
@@ -573,7 +573,7 @@
 		- 결합도 약할수록, 응집도 강할수록 독립성 높음
 			- 결합도(Coupling)
 				- 모듈 간 상호 의존하는 정도
-				- ![image](https://user-images.githubusercontent.com/53277342/153824284-8cbd84f1-85c7-4cf0-9056-a85318720f09.png)
+				![image](https://user-images.githubusercontent.com/53277342/153824284-8cbd84f1-85c7-4cf0-9056-a85318720f09.png)
 				- 자료 결합도(Data Coupling)
 					- 모듈 간 인터페이스가 자료 요소로만 구성될 때 결합도
 				- 스탬프(검인) 결합도(Stamp Coupling)
@@ -590,8 +590,8 @@
 					- 한 모듈이 다른 모듈의 내부 기능 및 자료를 직접 참조하거나 수정할 때의 결합도
 					
 			- 응집도(Cohesion)
-				- 모듈의 내부 요소들의 서로 관련되어있는 정도
-				- ![image](https://user-images.githubusercontent.com/53277342/153825119-f40ac0cf-1dbb-4103-8fb1-817e1888fc7b.png)
+				- 모듈의 내부 요소들의 서로 관련되어있는 정도  
+				![image](https://user-images.githubusercontent.com/53277342/153825119-f40ac0cf-1dbb-4103-8fb1-817e1888fc7b.png)
 				- 기능적 응집도(Functional Cohesion)
 					- 모듈 내부의 모든 기능 요소들이 단일 문제와 연관되어 수행될 때의 응집도
 				- 순차적 응집도(Sequential Cohesion)
