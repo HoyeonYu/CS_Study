@@ -699,7 +699,12 @@
 	- 명세 정보
 		- 시스템 연계 기술
 			- 개발할 시스템, 내외부 시스템 연계할 때 사용되는 기술
-			- ex) DB Link, API/Open API, 연계 솔루션, Socket, Web Service
+			- 예시
+				- DB Link: DB에서 제공하는 객체 이용하는 방식
+				- API/Open API: DB에서 데이터 읽어와 제공하는 API
+				- 연계 솔루션: EAI 서버와 클라이언트 이용하는 방식
+				- Socket: 서버는 소켓 생성해 포트 할당하고 클라이언트 요청 시 연결하는 방식
+				- Web Service: WSDL, UDDI, SOAP 프로토콜 이용하는 서비스
 		- 인터페이스 통신 유형
 			- 개발할 시스템, 내외부 시스템 간 데이터 송수신하는 형태
 			- 유형
@@ -722,6 +727,7 @@
 			- 테이블 정의서, 테이블 또는 파일 단위로 명세 작성
 		- 오류 식별 및 처리 방안 명세화
 			- 발생할 수 있는 오류 식별, 오류 처리 방안에 대한 명세 작성
+			- 오류 코드: 오류 발생 영역 구분자, 오류 그룹번호로 작성
 
 3. 미들웨어 솔루션 명세
 	- 미들웨어
@@ -734,14 +740,30 @@
 				- ex) ODBC, IDAPI, Glue
 			- RPV (Remote Procedure Call, 원격 프로시저 호출)
 				- 응용 프로그램의 프로시저 이용해 원격 프로시저를 로컬 프로시저처럼 호출하는 미들웨어
+					- 프로시저: DB에 대한 쿼리를 하나의 함수처럼 실행하기 위한 쿼리의 집합
 				- ex) Entera, ONC/RPC
 			- MOM (Message Oriented Middleware, 메시지 지향 미들웨어)
-				- 비동기형 메시지를 전달하는 방힉의 미들웨어
+				- 비동기형 메시지를 전달하는 방식의 미들웨어
 				- ex) MQ, Message Q, JMS
-			
+			- TP-Monitor (Transaction Processing Monitor, 트랜잭션 처리 모니터)
+				- 트랜잭션 처리 및 감시하는 미들웨어
+					- 트랜잭션 처리: 여러 이용자가 실시간으로 데이터 갱신하거나 검색하는 작업 처리
+				- 사용자 수가 증가해도 빠른 응답속도 유지해야 하는 업무에 사용
+				- ex) tuxedo, tmax
+			- ORB (Object Request Broker, 객체 요청 브로커)
+				- CORBA (Common Object Request Broker Application) 표준 스펙 구현
+					- CORBA: 분산 프로그램 객체 생성, 배포, 관리하기 위한 규격
+				- ex) Orbix, CORBA
+			- WAS (Web Application Server, 웹 어플리케이션 서버)
+				- 사용자의 요구에 따라 변하는 동적 컨텐츠를 처리하기 위해 사용되는 미들웨어
+				- ex) WebLogic, WebSphere
+		- 미들웨어 솔루션 식별
+			- 미들웨어 솔루션 확인 및 목록 작성
+		- 미들웨어 솔루션 명세서 작성
+			- 미들웨어 솔루션 목록의 솔루션별로 관련 정보 상세 기술
 
 
-
+                             
 
 
 
