@@ -1,4 +1,4 @@
-# Software Design (소프트웨어 설계)
+# Software Design
 
 ## Contents  
 [**1. 요구사항 확인**](#1-요구사항-확인)  
