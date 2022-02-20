@@ -72,7 +72,7 @@
 		![image](https://user-images.githubusercontent.com/53277342/154682153-c8ba59f4-a442-4386-895a-83336b783c80.png)
 	- 힙 정렬 (Heap Sort, O(nlogn))
 		- 전이진 트리(Complete Binary Tree)에서 자식 노드와 부모 노드 비교해 정렬  
-		- ![image](https://user-images.githubusercontent.com/53277342/154683949-a7aa3caa-771c-44d2-8077-1bb728135c81.png)
+		![image](https://user-images.githubusercontent.com/53277342/154683949-a7aa3caa-771c-44d2-8077-1bb728135c81.png)
 	- 합병 정렬 (Merge Sort, O(nlogn))
 		- 이미 정렬되어있는 두 개의 리스트를 하나로 합병 후 정렬  
 		![image](https://user-images.githubusercontent.com/53277342/154684156-c3c69835-07c0-46b0-bf51-59faba607c5e.png)
