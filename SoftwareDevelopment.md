@@ -56,29 +56,29 @@
 2. 정렬
 	- 삽입 정렬 (Insertion Sort, O(n^2))
 		- 모든 원소를 앞에서부터 정렬된 부분과 비교해 자신의 위치에 맞는 곳에 삽입  
-		![image](https://user-images.githubusercontent.com/53277342/154679777-087513d1-aa63-4bce-8c25-03aebd2a5379.png)
-		![image](https://user-images.githubusercontent.com/53277342/154679792-a137372a-169d-4a61-a89e-bbbf45344b33.png)
+		<img src="https://user-images.githubusercontent.com/53277342/154679777-087513d1-aa63-4bce-8c25-03aebd2a5379.png" width="50%"/>
+		<img src="https://user-images.githubusercontent.com/53277342/154679792-a137372a-169d-4a61-a89e-bbbf45344b33.png" width="50%"/>
 	- 셸 정렬 (Shell Sort, 평균 O(n^1.5), 최악 O(n^2))
 		- 특정 매개변수 값의 길이를 갖는 부분 리스트 여러 개 생성 후 삽입 정렬  
-		![image](https://user-images.githubusercontent.com/53277342/154680229-cf7b7c39-8923-43c0-a6c2-994eca1fbd70.png)
+		<img src="https://user-images.githubusercontent.com/53277342/154680229-cf7b7c39-8923-43c0-a6c2-994eca1fbd70.png" width="50%"/>
 	- 선택 정렬 (Selection Sort, O(n^2))
 		- 모든 원소 중 최소값을 찾아 맨 앞에 있는 값과 교체  
-		![image](https://user-images.githubusercontent.com/53277342/154680874-de35524e-b172-42da-88d1-227f547a41ee.png)
+		<img src="https://user-images.githubusercontent.com/53277342/154680874-de35524e-b172-42da-88d1-227f547a41ee.png" width="50%"/>
 	- 버블 정렬 (Bubble Sort, O(n^2))
 		- 인접한 두 원소를 비교해 교차하면서 정렬  
-		![image](https://user-images.githubusercontent.com/53277342/154681177-086e47f5-09b8-4576-8f2b-8fd253d8cbba.png)
+		<img src="https://user-images.githubusercontent.com/53277342/154681177-086e47f5-09b8-4576-8f2b-8fd253d8cbba.png" width="50%"/>
 	- 퀵 정렬 (Quick Sort, 평균 O(nlogn), 최악 O(n^2))
 		- Pivot 기준으로 부분 리스트로 분할 후 정렬  
-		![image](https://user-images.githubusercontent.com/53277342/154682153-c8ba59f4-a442-4386-895a-83336b783c80.png)
+		<img src="https://user-images.githubusercontent.com/53277342/154682153-c8ba59f4-a442-4386-895a-83336b783c80.png" width="50%"/>
 	- 힙 정렬 (Heap Sort, O(nlogn))
 		- 전이진 트리(Complete Binary Tree)에서 자식 노드와 부모 노드 비교해 정렬  
-		![image](https://user-images.githubusercontent.com/53277342/154683949-a7aa3caa-771c-44d2-8077-1bb728135c81.png)
+		<img src="https://user-images.githubusercontent.com/53277342/154683949-a7aa3caa-771c-44d2-8077-1bb728135c81.png" width="70%"/>
 	- 합병 정렬 (Merge Sort, O(nlogn))
 		- 이미 정렬되어있는 두 개의 리스트를 하나로 합병 후 정렬  
-		![image](https://user-images.githubusercontent.com/53277342/154684156-c3c69835-07c0-46b0-bf51-59faba607c5e.png)
+		<img src="https://user-images.githubusercontent.com/53277342/154684156-c3c69835-07c0-46b0-bf51-59faba607c5e.png" width="50%"/>
 	- 기수 정렬 (Radix Sort, O(dn))
 		- 자릿수별로 정렬  
-		![image](https://user-images.githubusercontent.com/53277342/154685160-29bf5d15-efd3-4947-b418-caf6d725d86c.png)
+		<img src="https://user-images.githubusercontent.com/53277342/154685160-29bf5d15-efd3-4947-b418-caf6d725d86c.png" width="70%"/>
 
 3. 데이터베이스
 	- 업무를 수행하는데 필요한 데이터들의 모임
