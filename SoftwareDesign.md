@@ -462,23 +462,23 @@
 	- 개발시간 단축, 안정적 개발 가능
 	- 패턴
 		- Layers Pattern  
-			![image](https://user-images.githubusercontent.com/53277342/153587030-051e700f-5cf7-446d-9258-c8f276929226.png)
+			<img src="https://user-images.githubusercontent.com/53277342/153587030-051e700f-5cf7-446d-9258-c8f276929226.png" width="50%"/>  
 			- 시스템을 계층화해 구성
 			- 상위 계층은 하위 계층에 대한 서비스 제공자, 하위 계층은 상위 계층에 대한 클라이언트
 			- 서로 마주보는 두 계층 사이에서만 상호작용 이뤄짐
 			- ex) OSI 7 Layer
 		- Client-Server Pattern  
-			![image](https://user-images.githubusercontent.com/53277342/153587059-b7f5f865-8573-4147-b4ac-f494a6df8d4c.png)
+			<img src="https://user-images.githubusercontent.com/53277342/153587059-b7f5f865-8573-4147-b4ac-f494a6df8d4c.png" width="50%"/>  
 			- 하나의 서버 컴포넌트와 다수의 클라이언트 컴포넌트로 구성
 			- 사용자는 클라이언트 통해 서버 요청, 클라이언트 응답 받아 사용자에게 제공
 		- Pype-Filter Pattern  
-			![image](https://user-images.githubusercontent.com/53277342/153587129-17031df9-d1c6-4e80-9d9c-b191ffa77450.png)
+			<img src="https://user-images.githubusercontent.com/53277342/153587129-17031df9-d1c6-4e80-9d9c-b191ffa77450.png" width="50%"/>  
 			- 데이터 스트림(송수신 흐름) 절차의 각 단계를 필터 컴포넌트로 캡슐화, 파이프 통해 데이터 전송
 			- 재사용성 좋고 확장 용이
 			- 필터간 데이터 이동 시 데이터 변환으로 인한 오버헤드 발생
 			- ex) UNIX의 Shell
 		- MVC Pattern (Model-View-Controller)  
-			![image](https://user-images.githubusercontent.com/53277342/153587777-77fee720-882a-42da-905d-84f09da062a3.png)
+			<img src="https://user-images.githubusercontent.com/53277342/153587777-77fee720-882a-42da-905d-84f09da062a3.png" width="50%"/>  
 			- 서브시스템을 3개의 부분으로 구조화
 			- 부분
 				- Model: 서브시스템의 핵심 기능, 데이터 보관
@@ -486,20 +486,20 @@
 				- Controller: 사용자로부터 받은 입력 처리
 			- 대화형 어플리케이션에 적합
 		- Master-Slave Pattern  
-			![image](https://user-images.githubusercontent.com/53277342/153587887-d0592666-ceb4-4f87-864e-3d8e16acfaf1.png)
+			<img src="https://user-images.githubusercontent.com/53277342/153587887-d0592666-ceb4-4f87-864e-3d8e16acfaf1.png" width="50%"/>  
 			- 마스터 컴포넌트는 슬레이브 컴포넌트로 작업 분할, 슬레이브 컴포넌트에서 처리된 결과물 받음
 			- 장애 허용 시스템, 병렬 컴퓨팅 시스템에서 주로 활용
 		- Broker Pattern  
-			![image](https://user-images.githubusercontent.com/53277342/153588082-fade5427-9599-4845-b2cc-4872cbc7007f.png)
+			<img src="https://user-images.githubusercontent.com/53277342/153588082-fade5427-9599-4845-b2cc-4872cbc7007f.png" width="50%"/>  
 			- 사용자가 원하는 서비스 브로커 컴포넌트에 요청, 브로커 컴포넌트가 요청에 맞는 컴포넌트와 사용자 연결
 			- 원격 호출에 응답하는 컴포넌트들이 여러 개 있을 때 적합
 			- 분산 환경 시스템에서 주로 활용
 		- Peer-To-Peer Pattern  
-			![image](https://user-images.githubusercontent.com/53277342/153588440-2e261173-6517-4a85-9220-b56e40a0e569.png)
+			<img src="https://user-images.githubusercontent.com/53277342/153588440-2e261173-6517-4a85-9220-b56e40a0e569.png" width="50%"/>  
 			- 피어를 하나의 컴포넌트로 간주, 상황에 따라 서버, 클라이언트가 될 수 있음
 			- 멀티스레딩 방식 사용
 		- Event-Bus Pattern  
-			![image](https://user-images.githubusercontent.com/53277342/153588619-deeb9f3c-2b61-4313-972e-ef7755fa29ad.png)
+			<img src="https://user-images.githubusercontent.com/53277342/153588619-deeb9f3c-2b61-4313-972e-ef7755fa29ad.png" width="50%"/>  
 			- 소스가 특정 채널에 이벤트 메시지 발행, 해당 채널 구독한 리스너들이 메시지 받아 이벤트 처리
 			- 주요 컴포넌트
 				- Source: 이벤트 생성
@@ -507,7 +507,7 @@
 				- Channel: 이벤트 통로
 				- Bus: 채널들 관리
 		- Blackboard Pattern  
-			![image](https://user-images.githubusercontent.com/53277342/153588826-96a97df0-582a-4468-8ff1-d9866ae5d43e.png)
+			<img src="https://user-images.githubusercontent.com/53277342/153588826-96a97df0-582a-4468-8ff1-d9866ae5d43e.png" width="50%"/>  
 			- 컴포넌트들은 검색 통해 블랙보드에서 원하는 데이터 찾음
 			- 해결책이 명확하지 않은 문제 처리할 때 유용
 			- ex) 음성 인식, 차량 식별, 신호 해석
