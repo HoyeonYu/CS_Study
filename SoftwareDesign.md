@@ -462,13 +462,13 @@
 	- 개발시간 단축, 안정적 개발 가능
 	- 패턴
 		- Layers Pattern  
-			<img src="https://user-images.githubusercontent.com/53277342/153587030-051e700f-5cf7-446d-9258-c8f276929226.png" width="50%"/>  
+			<img src="https://user-images.githubusercontent.com/53277342/153587030-051e700f-5cf7-446d-9258-c8f276929226.png" width="20%"/>  
 			- 시스템을 계층화해 구성
 			- 상위 계층은 하위 계층에 대한 서비스 제공자, 하위 계층은 상위 계층에 대한 클라이언트
 			- 서로 마주보는 두 계층 사이에서만 상호작용 이뤄짐
 			- ex) OSI 7 Layer
 		- Client-Server Pattern  
-			<img src="https://user-images.githubusercontent.com/53277342/153587059-b7f5f865-8573-4147-b4ac-f494a6df8d4c.png" width="50%"/>  
+			<img src="https://user-images.githubusercontent.com/53277342/153587059-b7f5f865-8573-4147-b4ac-f494a6df8d4c.png" width="20%"/>  
 			- 하나의 서버 컴포넌트와 다수의 클라이언트 컴포넌트로 구성
 			- 사용자는 클라이언트 통해 서버 요청, 클라이언트 응답 받아 사용자에게 제공
 		- Pype-Filter Pattern  
@@ -495,7 +495,7 @@
 			- 원격 호출에 응답하는 컴포넌트들이 여러 개 있을 때 적합
 			- 분산 환경 시스템에서 주로 활용
 		- Peer-To-Peer Pattern  
-			<img src="https://user-images.githubusercontent.com/53277342/153588440-2e261173-6517-4a85-9220-b56e40a0e569.png" width="50%"/>  
+			<img src="https://user-images.githubusercontent.com/53277342/153588440-2e261173-6517-4a85-9220-b56e40a0e569.png" width="30%"/>  
 			- 피어를 하나의 컴포넌트로 간주, 상황에 따라 서버, 클라이언트가 될 수 있음
 			- 멀티스레딩 방식 사용
 		- Event-Bus Pattern  
